@@ -1,0 +1,11 @@
+<h1>5 Stars Restaurants</h1>
+<div id="restaurants">
+  <%= render "restaurants/list", restaurants: @restaurants %>
+  <%= link_to "Back to all restaurants", restaurants_path %>
+  <% @restaurants.each do |restaurant| %>
+    <%= render restaurant %>
+    <p>
+      <%= link_to "Show this restaurant", restaurant %>
+    </p>
+  <% end %>
+</div>
